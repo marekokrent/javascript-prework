@@ -1,6 +1,8 @@
 function printMessage(msg){
 	var div = document.createElement('div');
-	div.innerHTML = msg;
+    div.innerText = msg;
+    
+
 	document.getElementById('messages').appendChild(div);
 }
 
@@ -29,16 +31,25 @@ console.log('przypisano zmienna:' + computerMove);
 
 var playerMove, playerInput;
 
+
+
+
+do {
+
 playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 console.log('wpisana cyfra to: ' + playerInput);
-
-
+clearMessages();
 
 if (playerInput <= '3' && playerInput >= '1') {
     playerMove = nameAssignment(playerInput);
   } else {
     playerMove = 'nieznany ruch';
+    printMessage('Nie wpisałeś/aś cyfry 1, 2 lub 3');
+    
   }
+
+} while (playerMove == 'nieznany ruch');
+
 
 console.log('przypisano zmienna:' + playerMove);
 
