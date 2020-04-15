@@ -9,5 +9,9 @@ function clearMessages(){
 }
 
 var playerMove;
-playerMove = 'papier';
+playerMove = 'kamien';
 printMessage('Zagrałem ' + playerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
+
+var randomNumber;
+randomNumber = Math.floor(Math.random() * 3 + 1);
+printMessage('Wylosowana liczba to: ' + randomNumber);
