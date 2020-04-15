@@ -60,7 +60,7 @@ if (randomNumber == playerInput) {
 
 }
 
-
+/*
 switch (randomNumber + playerInput) {
 
     case ('12') :
@@ -88,6 +88,18 @@ switch (randomNumber + playerInput) {
     break;
 
 }
+*/
+
+if (randomNumber + playerInput == '12') {
+    winSelect = 'wygrał player';
+
+} else if (randomNumber + playerInput == '23') {
+    winSelect = 'wygrał player';
+} else if (randomNumber + playerInput == '31') {
+    winSelect = 'wygrał player';
+} else {
+    winSelect = 'wygrał computer';
+} 
 
 console.log (randomNumber + playerInput);
 
