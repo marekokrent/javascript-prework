@@ -42,8 +42,46 @@ if (playerInput <= '3' && playerInput >= '1') {
 
 console.log('przypisano zmienna:' + playerMove);
 
+var winSelect;
+
+if (randomNumber == playerInput) {
+    winSelect = 'remis';
+
+}
+
+
+switch (randomNumber + playerInput) {
+
+    case ('12') :
+        winSelect = 'wygrał player';
+    break;
+
+    case ('13') :
+        winSelect = 'wygrał computer';
+    break;
+
+    case ('21') :
+        winSelect = 'wygrał computer';
+    break;
+
+    case ('23') :
+        winSelect = 'wygrał player';
+    break;
+
+    case ('31') :
+        winSelect = 'wygrał player';
+    break;
+
+    case ('32') :
+        winSelect = 'wygrał computer';
+    break;
+
+}
+
+console.log (randomNumber + playerInput);
+
 if (playerMove != 'nieznany ruch') {
 
-  printMessage('Zagrałem ' + computerMove + ' Twój ruch to: ' + playerMove + ' Wynik');
+  printMessage('Zagrałem: ' + computerMove + '   Twój ruch to: ' + playerMove + '   Wynik : ' + winSelect);
 
 }
